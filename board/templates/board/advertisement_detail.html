@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ reload|safe }}
+
+<h1>{{ advertisement.title }}</h1>
+<h3>Автор:
+    <a href="{% url 'board:advertisement_list' pk=advertisement.author.id %}">
+        {{ advertisement.author.username }}
+    </a> &ensp;&ensp;&ensp;&ensp; <span  class="date_font"> {{ advertisement.created_at }} </span></h3>
+<pre>{{ advertisement.content }}</pre>
+{% if advertisement.image %}
+<a class="a_img" href="{{ advertisement.image.url }}" target="_blank">
+  <img src="{{ advertisement.image.url }}" style="height: 300px;">
+</a>
+{% endif %}
+{% if images %}
+  {% for i in images %}
+    <a class="a_img" href="{{ i.image.url }}" target="_blank">
+      <img src="{{ i.image.url }}" style="height: 300px;">
+    </a>
+  {% endfor %}
+{% endif %}
+<br>
+
+<a class="a_img" href="{% url 'board:like_dislike' pk=advertisement.pk tp=1 %}">
+  {% if like %}
+    <img src="/static/board_project/like_on.png" width="40">
+  {% else %}
+    <img src="/static/board_project/like.png" width="40">
+  {% endif %}
+</a>
+{{ advertisement.like_count }} &ensp;&ensp;
+<a class="a_img" href="{% url 'board:like_dislike' pk=advertisement.pk tp=0 %}">
+  {% if dislike %}
+    <img src="/static/board_project/dislike_on.png" width="40">
+  {% else %}
+    <img src="/static/board_project/dislike.png" width="40">
+  {% endif %}
+</a>
+{{ advertisement.dislike_count }}
+<br>  <br>
+
+{% if advertisement.author == user or user.is_superuser %}
+<table class="no_border">
+  <tr class="no_border">
+      <th class="no_border">
+      <form method="post" action="{% url 'board:edit_advertisement' pk=advertisement.pk %}">
+        {% csrf_token %}
+        <button type="submit" name="edit_adv" value="{{advertisement.pk}}">
+            Редактировать
+        </button>
+      </form>
+      </th>
+      <th class="no_border">
+      <form method="post" action="{% url 'board:del_advertisement' pk=advertisement.pk %}">
+        {% csrf_token %}
+        <button onclick="return confirm('Вы уверены, что хотите удалить это объявление?');"
+                type="submit" name="del_adv" value="{{advertisement.pk}}">
+            Удалить
+        </button>
+      </form>
+      </th>
+      <th class="no_border">
+      <form method="post" action="{% url 'board:image_generation' pk=advertisement.pk %}">
+        {% csrf_token %}
+        <button onclick="return confirm('Вы уверены, что хотите сгенерировать изображение по запросу: {{ advertisement.title }} {{ advertisement.content }}?');"
+                type="submit" name="gen_image" value="{{advertisement.pk}}">
+            Сгенерировать картинку
+        </button>
+      </form>
+      </th>
+  </tr>
+</table>
+{% endif %}
+
+{% if error %}
+    <p class="red-text">{{ error }}</p>
+{% endif %}
+<br> <hr>
+<h2>Комментарии:</h2>
+{% if user.is_authenticated %}
+    <a href="{% url 'board:add_comment' pk=advertisement.pk %}"><button>Добавить комментарий</button></a>
+{% endif %}
+ <br> <br>
+{% if comments %}
+    <table>
+      <thead>
+        <tr>
+          <th>Содержание комментария</th>
+          <th>Автор</th>
+        </tr>
+      </thead>
+      {% for comment in comments %}
+        <tr class="align_left">
+          <th>
+            <div class="date_font small_font">{{ comment.created_at }}</div>
+            <pre class="normal_font">{{ comment.content }}</pre>
+            {% if comment.author == user or user.is_superuser %}
+              <div class="date_font small_font">
+                <a href="{% url 'board:edit_comment' pk=comment.id %}">
+                    Редактировать
+                </a> &ensp;&ensp;
+                <a href="{% url 'board:delete_comment' pk=comment.id %}"
+                   onclick="return confirm('Вы уверены, что хотите удалить комментарий');">
+                    Удалить
+                </a>
+              </div>
+            {% endif %}
+          </th>
+          <th>
+            <a href="{% url 'board:advertisement_list' pk=comment.author.id %}">{{ comment.author }}</a>
+          </th>
+        </tr>
+      {% endfor %}
+    </table>
+{% endif %}
+
+{% endblock %}

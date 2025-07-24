@@ -1,0 +1,4 @@
+2025-01-07 19:52:35,501 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-01-07 19:53:33,298 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-01-07 19:53:40,075 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-01-07 20:45:48,145 | INFO | django.utils.autoreload | Watching for file changes with StatReloader

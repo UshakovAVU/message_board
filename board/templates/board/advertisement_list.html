@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="reload"></div>
+<h1>Объявления</h1>
+{% if user_show %} <h2>Все объявления пользователя: {{ user_show }} ({{ user_stat.advertisement_count }})</h2>
+{% endif %}
+{% if user.is_authenticated %}
+    <a href="{% url 'board:add_advertisement' %}"><button>Добавить объявление</button></a>
+    <br> <br>
+{% endif %}
+{% include 'board/paginator.html' %}
+<table>
+  <thead>
+    <tr>
+      <th>Объявления</th>
+      <th>Фото</th>
+      <th>Автор</th>
+    </tr>
+  </thead>
+  {% for advertisement, images in advertisements %}
+    <tr class="align_left">
+      <th>
+        <div class="date_font small_font">{{ advertisement.created_at }}</div>
+        <a href="{% url 'board:advertisement_detail' pk=advertisement.pk %}">{{ advertisement.title }}</a>
+        <div class="small_font">{{ advertisement.content|truncatechars:50 }}</div>
+      </th>
+      <th>
+        {% if advertisement.image %}
+          <a class="a_img" href="{{ advertisement.image.url }}" target="_blank">
+            <img src="{{ advertisement.image.url }}" style="height: 30px;">
+          </a>
+        {% endif %}
+        {% if images %}
+          {% for img in images %}
+            <a class="a_img" href="{{ img.image.url }}" target="_blank">
+              <img src="{{ img.image.url }}" style="height: 30px;">
+            </a>
+          {% endfor %}
+        {% endif %}
+      </th>
+      <th>
+        <a href="{% url 'board:advertisement_list' pk=advertisement.author.id %}">
+          {{ advertisement.author.username }}
+        </a>
+      </th>
+    </tr>
+  {% endfor %}
+</table>
+{% include 'board/paginator.html' %}
+
+{% endblock %}

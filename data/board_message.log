@@ -1,0 +1,35 @@
+2025-07-24 07:49:51,742 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-24 07:50:03,552 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:50:09,882 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:50:14,416 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:50:15,729 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:50:37,883 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:51:13,309 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:51:21,564 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:51:31,637 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 07:51:41,737 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:09:16,601 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-24 08:09:37,082 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:09:53,826 | INFO | root | kandinsky_query: Error: ('Expecting value: line 1 column 1 (char 0)',)
+2025-07-24 08:15:50,022 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:16:00,399 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:16:10,556 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:14,455 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:25,352 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:25,402 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:35,490 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:46,431 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:46,474 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:56,622 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:20:56,692 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:06,790 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:06,831 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:17,197 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:27,320 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:28,581 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:34,385 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:38,268 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:21:43,780 | WARNING | django.request | Not Found: /media/images/kandinsky/2025_1/img_1735995774682399500.jpg
+2025-07-24 08:22:38,772 | INFO | root | kandinsky_query: Error: ('Expecting value: line 1 column 1 (char 0)',)
+2025-07-24 08:27:55,236 | WARNING | django.request | Not Found: /favicon.ico
+2025-07-24 08:28:40,860 | INFO | django.utils.autoreload | Watching for file changes with StatReloader

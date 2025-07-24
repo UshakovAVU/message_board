@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Доска объявлений{% endblock %}</title>
+    {% if user_pref.theme != 'dark' %}
+      <link rel="stylesheet" type="text/css" href='{% static "board_project/style-day.css" %}'>
+    {% else %}
+      <link rel="stylesheet" type="text/css" href='{% static "board_project/style-night.css" %}'>
+    {% endif %}
+    <link rel="icon" href="{% static 'favicon3.ico' %}" />
+    <script src="{% static 'reload.js' %}"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'home' %}">Домой</a>
+        <a href="{% url 'board:advertisement_list' %}">Доска объявлений</a>
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+              <a href="{% url 'board:user_stat_list' %}">Статистика</a>
+            {% endif %}
+            <a href="{% url 'board:user_settings' %}">Настройки</a>
+            <a href="{% url 'logout' %}">Выход (<span class="small_font">{{user}}</span>)</a>
+            <a href="?day=theme" title="Светлая/темная тема">
+                {% if user_pref.theme != 'dark' %}
+                  <img src="{% static 'board_project/day.png' %}" width="34">
+                {% else %}
+                  <img src="{% static 'board_project/night.png' %}" width="34">
+                {% endif %}
+            </a>
+        {% else %}
+            <a href="{% url 'login' %}">Вход</a>
+            <a href="{% url 'signup' %}">Регистрация</a>
+        {% endif %}
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+<br>  <hr>
+    © HIT (Home Information Technology)
+    <br> Пишите нам на почту: ✉<a href="mailto:mail@mail.ru"> mail@mail.ru </a>
+    <br>  <br>
+
+</body>
+</html>
