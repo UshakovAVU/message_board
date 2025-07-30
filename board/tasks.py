@@ -9,6 +9,7 @@ import logging
 # Настройка логирования
 logger = logging.getLogger(__name__)
 
+
 @shared_task(bind=True, default_retry_delay=300, max_retries=3)
 def send_response_notification(self, comment_id):
     try:
@@ -45,6 +46,7 @@ def send_response_notification(self, comment_id):
 
     except self.max_retries:
         logger.error(f'Max retries reached for task {self.request.id}')
+
 
 @shared_task(bind=True, default_retry_delay=300, max_retries=3)
 def send_accept_notification(self, comment_id):

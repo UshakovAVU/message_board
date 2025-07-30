@@ -1,0 +1,17 @@
+# Кэши Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Медиа и статические файлы
+media/
+staticfiles/
+
+# Логи и БД
+*.log
+db.sqlite3
+
+# Временные файлы
+*.swp
+*.swo

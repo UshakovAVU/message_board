@@ -33,3 +33,14 @@
 2025-07-24 08:22:38,772 | INFO | root | kandinsky_query: Error: ('Expecting value: line 1 column 1 (char 0)',)
 2025-07-24 08:27:55,236 | WARNING | django.request | Not Found: /favicon.ico
 2025-07-24 08:28:40,860 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-30 07:46:35,635 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-30 08:02:40,556 | WARNING | django.request | Not Found: /favicon.ico
+2025-07-30 12:22:06,865 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-30 12:22:56,567 | INFO | django.utils.autoreload | C:\Users\UshakovAV\PyCharmBulletinBoard\message_board\board_project\settings.py changed, reloading.
+2025-07-30 12:22:57,580 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-30 12:23:10,530 | INFO | django.utils.autoreload | C:\Users\UshakovAV\PyCharmBulletinBoard\message_board\board_project\settings.py changed, reloading.
+2025-07-30 12:36:35,324 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-30 12:36:57,762 | INFO | django.utils.autoreload | C:\Users\UshakovAV\PyCharmBulletinBoard\message_board\board_project\settings.py changed, reloading.
+2025-07-30 12:36:58,661 | INFO | django.utils.autoreload | Watching for file changes with StatReloader
+2025-07-30 12:37:15,996 | INFO | django.utils.autoreload | C:\Users\UshakovAV\PyCharmBulletinBoard\message_board\board_project\settings.py changed, reloading.
+2025-07-30 13:27:09,349 | INFO | root | Создан пользователь: UshakovAVU
